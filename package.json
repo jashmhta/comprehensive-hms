@@ -1,0 +1,53 @@
+{
+  "name": "comprehensive-hms",
+  "version": "1.0.0",
+  "description": "Comprehensive Hospital Management System for multi-specialty hospitals",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run mobile\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "mobile": "cd mobile && npm start",
+    "build": "cd client && npm run build",
+    "test": "jest",
+    "lint": "eslint .",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "migrate": "cd server && npm run migrate",
+    "seed": "cd server && npm run seed",
+    "backup": "cd server && npm run backup",
+    "restore": "cd server && npm run restore"
+  },
+  "keywords": [
+    "hospital",
+    "management",
+    "healthcare",
+    "medical",
+    "patient",
+    "doctor",
+    "pharmacy",
+    "laboratory",
+    "billing"
+  ],
+  "author": "HMS Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "eslint": "^8.45.0",
+    "jest": "^29.6.1",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jashmhta/comprehensive-hms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jashmhta/comprehensive-hms/issues"
+  },
+  "homepage": "https://github.com/jashmhta/comprehensive-hms#readme"
+}
